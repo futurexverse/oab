@@ -1,0 +1,314 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bank of America invest &mdash; track your portfolio and holdings.">
+  <title>Bank of America - Invest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+<!-- Site Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <svg class="brand-flag" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="flag-gradient" x1="0%" y1="50%" x2="100%" y2="50%">
+              <stop offset="50%" stop-color="#012169" />
+              <stop offset="50%" stop-color="#E31837" />
+            </linearGradient>
+          </defs>
+          <path fill="url(#flag-gradient)" d="M15.194 7.57c.487-.163 1.047-.307 1.534-.451-1.408-.596-3.176-1.227-4.764-1.625-.253.073-1.01.271-1.534.434.541.162 2.328.577 4.764 1.642zm-8.896 6.785c.577.343 1.19.812 1.786 1.209 3.952-3.068 7.85-5.432 12.127-6.767-.596-.307-1.119-.578-1.787-.902-2.562.65-6.947 2.4-12.126 6.46zm-.758-6.46c-2.112.974-4.331 2.31-5.54 3.085.433.199.866.361 1.461.65 2.671-1.805 4.764-2.905 5.594-3.266-.595-.217-1.154-.361-1.515-.47zm8.066.234c-.686-.379-3.068-1.263-4.71-1.642-.487.18-1.173.451-1.642.65.595.162 2.815.758 4.71 1.714.487-.235 1.173-.523 1.642-.722zm-3.374 1.552c-.56-.27-1.173-.523-1.643-.74-1.425.704-3.284 1.769-5.63 3.447.505.27 1.047.595 1.624.92 1.805-1.335 3.627-2.598 5.649-3.627zm1.732 8.825c3.79-3.249 9.113-6.407 12.036-7.544a48.018 48.018 0 00-1.949-1.155c-3.771 1.246-8.174 4.007-12.108 7.129.667.505 1.371 1.028 2.02 1.57zm2.851-.235h-.108l-.18-.27h-.109v.27h-.072v-.596h.27c.055 0 .109 0 .145.036.054.019.072.073.072.127 0 .108-.09.162-.198.162zm-.289-.343c.09 0 .199.018.199-.09 0-.072-.072-.09-.144-.09h-.163v.18zm-.523.036c0-.289.235-.523.541-.523.307 0 .542.234.542.523a.543.543 0 01-.542.542.532.532 0 01-.54-.542m.107 0c0 .235.199.433.451.433a.424.424 0 100-.848c-.27 0-.45.199-.45.415"/>
+        </svg>
+        <span class="brand-name">Bank of America</span>
+      </a>
+
+      <nav class="main-nav" id="main-nav">
+        <a href="index.html" class="nav-link">Accounts</a>
+        <a href="index.html#dashboard" class="nav-link">Dashboard</a>
+        <a href="transfer.html" class="nav-link">Transfers</a>
+        <a href="deposit.html" class="nav-link">Deposit</a>
+        <a href="invest.html" class="nav-link active">Invest</a>
+        <a href="help.html" class="nav-link">Help</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="notif-wrap">
+          <button class="icon-btn" id="notif-btn" aria-label="View notifications">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+              <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+            </svg>
+            <span class="badge-count">3</span>
+          </button>
+          <div class="notif-dropdown" id="notif-dropdown">
+            <div class="notif-header">
+              <h3>Notifications</h3>
+              <button class="notif-close" id="close-notif" aria-label="Close notifications">&times;</button>
+            </div>
+            <div class="notif-list">
+              <div class="notif-item">
+                <div class="notif-dot"></div>
+                <div>
+                  <span class="notif-title">Security Alert</span>
+                  <p class="notif-text">New login detected from a new device.</p>
+                  <span class="notif-time">5 mins ago</span>
+                </div>
+              </div>
+              <div class="notif-item">
+                <div class="notif-dot"></div>
+                <div>
+                  <span class="notif-title">Preferred Gold Status Updated</span>
+                  <p class="notif-text">Congratulations, your Rewards Level has been verified.</p>
+                  <span class="notif-time">2 hours ago</span>
+                </div>
+              </div>
+              <div class="notif-item">
+                <div class="notif-dot"></div>
+                <div>
+                  <span class="notif-title">Cash Back Deal Activated</span>
+                  <p class="notif-text">Get 5% cash back at local coffee shops this week.</p>
+                  <span class="notif-time">Yesterday</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button class="sign-out-btn" id="logout-btn" aria-label="Sign Out">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+            <polyline points="16 17 21 12 16 7"></polyline>
+            <line x1="21" y1="12" x2="9" y2="12"></line>
+          </svg>
+          <span class="sign-out-text">Sign Out</span>
+        </button>
+
+        <button class="hamburger-btn" id="menu-btn" aria-label="Toggle navigation menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container page-main invest-page">
+
+    <div class="page-title-row">
+      <div class="page-heading">
+        <h1>Invest</h1>
+        <p>Merrill &middot; Portfolio up <span class="gain" style="font-weight: 700;">+$3,182.45</span> this year</p>
+      </div>
+    </div>
+
+    <div class="main-grid">
+
+      <!-- Main Column -->
+      <div>
+        <!-- Portfolio Summary -->
+        <div class="dashboard-grid">
+          <div class="stat-card">
+            <div class="stat-label">Total Investments</div>
+            <div class="stat-value">$45,231.80</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">Total Return (YTD)</div>
+            <div class="stat-value gain">+$3,182.45</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">Dividends (YTD)</div>
+            <div class="stat-value">$421.10</div>
+          </div>
+        </div>
+
+        <!-- Holdings -->
+        <div class="list-card">
+          <h3>Your Holdings</h3>
+          <div class="holdings-table-wrap">
+            <table class="holdings-table">
+              <thead>
+                <tr>
+                  <th>Holding</th>
+                  <th class="num">Shares</th>
+                  <th class="num">Price</th>
+                  <th class="num">Value</th>
+                  <th class="num">Total Return</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr data-feature="Vanguard S&P 500 ETF">
+                  <td>
+                    <div class="holdings-name">Vanguard S&amp;P 500 ETF</div>
+                    <div class="holdings-sub">VOO</div>
+                  </td>
+                  <td class="num" data-label="Shares">33.87</td>
+                  <td class="num" data-label="Price">$487.52</td>
+                  <td class="num" data-label="Value">$16,510.00</td>
+                  <td class="num gain" data-label="Return">+8.4%</td>
+                </tr>
+                <tr data-feature="Apple Inc">
+                  <td>
+                    <div class="holdings-name">Apple Inc.</div>
+                    <div class="holdings-sub">AAPL</div>
+                  </td>
+                  <td class="num" data-label="Shares">28.74</td>
+                  <td class="num" data-label="Price">$212.43</td>
+                  <td class="num" data-label="Value">$6,105.00</td>
+                  <td class="num gain" data-label="Return">+12.1%</td>
+                </tr>
+                <tr data-feature="Vanguard Total International Stock">
+                  <td>
+                    <div class="holdings-name">Vanguard Total Intl Stock</div>
+                    <div class="holdings-sub">VXUS</div>
+                  </td>
+                  <td class="num" data-label="Shares">92.37</td>
+                  <td class="num" data-label="Price">$61.22</td>
+                  <td class="num" data-label="Value">$5,655.00</td>
+                  <td class="num gain" data-label="Return">+3.2%</td>
+                </tr>
+                <tr data-feature="Microsoft Corp">
+                  <td>
+                    <div class="holdings-name">Microsoft Corp.</div>
+                    <div class="holdings-sub">MSFT</div>
+                  </td>
+                  <td class="num" data-label="Shares">11.02</td>
+                  <td class="num" data-label="Price">$431.20</td>
+                  <td class="num" data-label="Value">$4,750.00</td>
+                  <td class="num gain" data-label="Return">+6.3%</td>
+                </tr>
+                <tr data-feature="Vanguard Total Bond Market">
+                  <td>
+                    <div class="holdings-name">Vanguard Total Bond</div>
+                    <div class="holdings-sub">BND</div>
+                  </td>
+                  <td class="num" data-label="Shares">56.06</td>
+                  <td class="num" data-label="Price">$72.61</td>
+                  <td class="num" data-label="Value">$4,070.00</td>
+                  <td class="num gain" data-label="Return">+0.8%</td>
+                </tr>
+                <tr data-feature="Johnson & Johnson">
+                  <td>
+                    <div class="holdings-name">Johnson &amp; Johnson</div>
+                    <div class="holdings-sub">JNJ</div>
+                  </td>
+                  <td class="num" data-label="Shares">21.34</td>
+                  <td class="num" data-label="Price">$148.29</td>
+                  <td class="num" data-label="Value">$3,165.00</td>
+                  <td class="num loss" data-label="Return">-2.1%</td>
+                </tr>
+                <tr data-feature="Vanguard Real Estate ETF">
+                  <td>
+                    <div class="holdings-name">Vanguard Real Estate</div>
+                    <div class="holdings-sub">VNQ</div>
+                  </td>
+                  <td class="num" data-label="Shares">29.66</td>
+                  <td class="num" data-label="Price">$91.55</td>
+                  <td class="num" data-label="Value">$2,715.00</td>
+                  <td class="num loss" data-label="Return">-1.4%</td>
+                </tr>
+                <tr data-feature="iShares TIPS Bond ETF">
+                  <td>
+                    <div class="holdings-name">iShares TIPS Bond</div>
+                    <div class="holdings-sub">TIP</div>
+                  </td>
+                  <td class="num" data-label="Shares">20.48</td>
+                  <td class="num" data-label="Price">$110.42</td>
+                  <td class="num" data-label="Value">$2,261.80</td>
+                  <td class="num gain" data-label="Return">+1.1%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Allocation -->
+        <div class="chart-card">
+          <h3>Portfolio Allocation</h3>
+          <div class="allocation-wrap">
+            <div class="donut-wrap">
+              <svg class="donut" viewBox="0 0 160 160" role="img" aria-label="Portfolio allocation donut chart">
+                <circle cx="80" cy="80" r="60" fill="none" stroke-width="20" transform="rotate(-90 80 80)" stroke="#EDF0F5" stroke-dasharray="376.991 0" />
+                <circle cx="80" cy="80" r="60" fill="none" stroke-width="20" transform="rotate(-90 80 80)" stroke="#012169" stroke-dasharray="137.602 239.389" stroke-dashoffset="0" />
+                <circle cx="80" cy="80" r="60" fill="none" stroke-width="20" transform="rotate(-90 80 80)" stroke="#E31837" stroke-dasharray="50.894 326.097" stroke-dashoffset="-137.602" />
+                <circle cx="80" cy="80" r="60" fill="none" stroke-width="20" transform="rotate(-90 80 80)" stroke="#2A5DB0" stroke-dasharray="47.124 329.867" stroke-dashoffset="-188.496" />
+                <circle cx="80" cy="80" r="60" fill="none" stroke-width="20" transform="rotate(-90 80 80)" stroke="#F04E5E" stroke-dasharray="39.584 337.407" stroke-dashoffset="-235.620" />
+                <circle cx="80" cy="80" r="60" fill="none" stroke-width="20" transform="rotate(-90 80 80)" stroke="#8A94A6" stroke-dasharray="33.929 343.062" stroke-dashoffset="-275.203" />
+                <circle cx="80" cy="80" r="60" fill="none" stroke-width="20" transform="rotate(-90 80 80)" stroke="#C0C7D4" stroke-dasharray="26.389 350.602" stroke-dashoffset="-309.133" />
+                <circle cx="80" cy="80" r="60" fill="none" stroke-width="20" transform="rotate(-90 80 80)" stroke="#4E7CC4" stroke-dasharray="22.619 354.372" stroke-dashoffset="-335.522" />
+                <circle cx="80" cy="80" r="60" fill="none" stroke-width="20" transform="rotate(-90 80 80)" stroke="#6B7A99" stroke-dasharray="18.850 358.141" stroke-dashoffset="-358.141" />
+              </svg>
+              <div class="donut-center">
+                <span class="donut-total">$45,231.80</span>
+                <span class="donut-sub">Total Value</span>
+              </div>
+            </div>
+            <ul class="allocation-legend">
+              <li><span class="legend-swatch" style="background:#012169"></span><span class="legend-name">VOO</span><span class="legend-amt">$16,510.00</span><span class="legend-pct">36.5%</span></li>
+              <li><span class="legend-swatch" style="background:#E31837"></span><span class="legend-name">AAPL</span><span class="legend-amt">$6,105.00</span><span class="legend-pct">13.5%</span></li>
+              <li><span class="legend-swatch" style="background:#2A5DB0"></span><span class="legend-name">VXUS</span><span class="legend-amt">$5,655.00</span><span class="legend-pct">12.5%</span></li>
+              <li><span class="legend-swatch" style="background:#F04E5E"></span><span class="legend-name">MSFT</span><span class="legend-amt">$4,750.00</span><span class="legend-pct">10.5%</span></li>
+              <li><span class="legend-swatch" style="background:#8A94A6"></span><span class="legend-name">BND</span><span class="legend-amt">$4,070.00</span><span class="legend-pct">9.0%</span></li>
+              <li><span class="legend-swatch" style="background:#C0C7D4"></span><span class="legend-name">JNJ</span><span class="legend-amt">$3,165.00</span><span class="legend-pct">7.0%</span></li>
+              <li><span class="legend-swatch" style="background:#4E7CC4"></span><span class="legend-name">VNQ</span><span class="legend-amt">$2,715.00</span><span class="legend-pct">6.0%</span></li>
+              <li><span class="legend-swatch" style="background:#6B7A99"></span><span class="legend-name">TIP</span><span class="legend-amt">$2,261.80</span><span class="legend-pct">5.0%</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="sidebar-card">
+          <h3 class="sidebar-card-title">Retirement Goal</h3>
+          <div class="rewards-level">$62,400 of $100,000 saved</div>
+          <div class="progress-track">
+            <div class="progress-fill" style="width: 62%;"></div>
+          </div>
+          <a class="card-btn" href="invest-planner.html">Open Planner</a>
+        </div>
+
+        <div class="sidebar-card">
+          <h3 class="sidebar-card-title">Weekly Insights</h3>
+          <ul class="help-list">
+            <li><a href="invest-insight-market.html">Market overview this week</a></li>
+            <li><a href="invest-insight-rebalance.html">Rebalance suggestion ready</a></li>
+            <li><a href="invest-insight-dividends.html">Dividend reinvestment status</a></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-card">
+          <h3 class="sidebar-card-title">Talk to an Advisor</h3>
+          <p class="sidebar-card-text">Get personalized guidance from a Merrill financial advisor. No fee for eligible clients.</p>
+          <button class="card-btn" data-feature="Schedule an Advisor Call">Schedule a Call</button>
+        </div>
+      </aside>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <ul class="footer-links">
+        <li><a href="lifeplan.html">BOA Life Plan</a></li>
+        <li><a href="rewards.html">My Rewards</a></li>
+        <li><a href="lifeplan-retirement.html">Retirement Goal</a></li>
+        <li><a href="help.html">Help</a></li>
+              </ul>
+      <p class="footer-note">&copy; 2026 Bank of America Corporation.</p>
+    </div>
+  </footer>
+
+  <script src="common.js"></script>
+  <script src="invest.js"></script>
+</body>
+</html>

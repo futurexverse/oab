@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bank of America Admin Control Panel — Manage pending deposits, permit transactions, and adjust dashboard balances.">
+  <title>Bank of America - Admin Control Panel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+    .admin-badge {
+      background: var(--navy);
+      color: #FFFFFF;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 4px 10px;
+      border-radius: 4px;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      margin-left: 10px;
+    }
+    .permit-btn {
+      background: #16A34A;
+      color: #FFFFFF;
+      border: none;
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+    .permit-btn:hover { background: #15803D; }
+    .decline-btn {
+      background: #DC2626;
+      color: #FFFFFF;
+      border: none;
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.2s ease;
+      margin-left: 6px;
+    }
+    .decline-btn:hover { background: #B91C1C; }
+    .admin-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 12px;
+      font-size: 14px;
+    }
+    .admin-table th {
+      background: #F8FAFC;
+      color: var(--navy);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      text-align: left;
+      padding: 12px 14px;
+      border-bottom: 2px solid var(--border);
+    }
+    .admin-table td {
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: middle;
+    }
+    .admin-table tr:hover {
+      background: #F9FBFD;
+    }
+    .balance-card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <svg class="brand-flag" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="admin-flag-gradient" x1="0%" y1="50%" x2="100%" y2="50%">
+              <stop offset="50%" stop-color="#012169" />
+              <stop offset="50%" stop-color="#E31837" />
+            </linearGradient>
+          </defs>
+          <path fill="url(#admin-flag-gradient)" d="M15.194 7.57c.487-.163 1.047-.307 1.534-.451-1.408-.596-3.176-1.227-4.764-1.625-.253.073-1.01.271-1.534.434.541.162 2.328.577 4.764 1.642zm-8.896 6.785c.577.343 1.19.812 1.786 1.209 3.952-3.068 7.85-5.432 12.127-6.767-.596-.307-1.119-.578-1.787-.902-2.562.65-6.947 2.4-12.126 6.46zm-.758-6.46c-2.112.974-4.331 2.31-5.54 3.085.433.199.866.361 1.461.65 2.671-1.805 4.764-2.905 5.594-3.266-.595-.217-1.154-.361-1.515-.47zm8.066.234c-.686-.379-3.068-1.263-4.71-1.642-.487.18-1.173.451-1.642.65.595.162 2.815.758 4.71 1.714.487-.235 1.173-.523 1.642-.722zm-3.374 1.552c-.56-.27-1.173-.523-1.643-.74-1.425.704-3.284 1.769-5.63 3.447.505.27 1.047.595 1.624.92 1.805-1.335 3.627-2.598 5.649-3.627zm1.732 8.825c3.79-3.249 9.113-6.407 12.036-7.544a48.018 48.018 0 00-1.949-1.155c-3.771 1.246-8.174 4.007-12.108 7.129.667.505 1.371 1.028 2.02 1.57zm2.851-.235h-.108l-.18-.27h-.109v.27h-.072v-.596h.27c.055 0 .109 0 .145.036.054.019.072.073.072.127 0 .108-.09.162-.198.162zm-.289-.343c.09 0 .199.018.199-.09 0-.072-.072-.09-.144-.09h-.163v.18zm-.523.036c0-.289.235-.523.541-.523.307 0 .542.234.542.523a.543.543 0 01-.542.542.532.532 0 01-.54-.542m.107 0c0 .235.199.433.451.433a.424.424 0 100-.848c-.27 0-.45.199-.45.415"/>
+        </svg>
+        <span class="brand-name">Bank of America</span>
+        <span class="admin-badge">Admin Panel</span>
+      </a>
+
+      <nav class="main-nav" id="main-nav">
+        <a href="index.html" class="nav-link">Accounts</a>
+        <a href="index.html#dashboard" class="nav-link">Dashboard</a>
+        <a href="transfer.html" class="nav-link">Transfers</a>
+        <a href="deposit.html" class="nav-link">Deposit</a>
+        <a href="admin.html" class="nav-link active">Admin Panel</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="sign-out-btn" id="logout-btn" aria-label="Sign Out">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+            <polyline points="16 17 21 12 16 7"></polyline>
+            <line x1="21" y1="12" x2="9" y2="12"></line>
+          </svg>
+          <span class="sign-out-text">Sign Out</span>
+        </button>
+
+        <button class="hamburger-btn" id="menu-btn" aria-label="Toggle navigation menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container page-main">
+    <div class="page-title-row">
+      <div class="page-heading">
+        <h1>Admin Control Panel</h1>
+        <p>Review pending crypto deposits, permit balance increases, and manage account funds.</p>
+      </div>
+    </div>
+
+    <!-- Balance Overview Cards -->
+    <div class="balance-card-grid">
+      <div class="stat-card">
+        <div class="stat-label">Main Checking Balance</div>
+        <div class="stat-value balance-big" id="adm-checking-val">$0.00</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Savings Account Balance</div>
+        <div class="stat-value balance-big" id="adm-savings-val">$0.00</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Pending Deposits Count</div>
+        <div class="stat-value" id="adm-pending-count">0</div>
+      </div>
+    </div>
+
+    <div class="main-grid">
+
+      <!-- Main Column: Pending Approvals -->
+      <div>
+
+        <!-- Pending Deposits Permit Section -->
+        <div class="form-card" style="margin-bottom: 24px;">
+          <h2>Pending Crypto Deposits (Permit Approval)</h2>
+          <p class="form-card-sub">Approving a deposit will permit an immediate balance increase on the user's dashboard.</p>
+          
+          <div id="admin-toast-msg" class="form-success"></div>
+
+          <div style="overflow-x: auto;">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>Deposit ID / User</th>
+                  <th>Asset</th>
+                  <th>Crypto Amount</th>
+                  <th>USD Amount</th>
+                  <th>Date</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="admin-deposits-tbody">
+                <!-- Dynamically populated -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Pending Transfers Permit Section -->
+        <div class="form-card">
+          <h2>Pending Account Transfers</h2>
+          <p class="form-card-sub">Approve or decline pending internal/customer wire transfers.</p>
+
+          <div style="overflow-x: auto;">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>Transfer ID / User</th>
+                  <th>Description</th>
+                  <th>Amount</th>
+                  <th>Date</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="admin-transfers-tbody">
+                <!-- Dynamically populated -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Registered Customer Accounts Section -->
+        <div class="form-card" style="margin-top: 24px;">
+          <h2>Registered Online Banking Accounts</h2>
+          <p class="form-card-sub">Users who created an account via the enrollment portal.</p>
+
+          <div style="overflow-x: auto;">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>Online ID</th>
+                  <th>Full Name</th>
+                  <th>Email</th>
+                  <th>Account Plan</th>
+                  <th>Account Number</th>
+                  <th>Live Balance</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="admin-users-tbody">
+                <!-- Dynamically populated -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Sidebar: Direct Balance Permit Modifier -->
+      <aside class="sidebar">
+        <div class="sidebar-card">
+          <h3 class="sidebar-card-title">Permit Balance Increase</h3>
+          <p class="sidebar-card-text">Manually credit or adjust any account balance instantly on the dashboard.</p>
+
+          <form id="admin-balance-form" style="margin-top: 14px;">
+            <div class="form-field">
+              <label class="form-label" for="adm-account-select">Select Account</label>
+              <select class="form-select" id="adm-account-select">
+                <option value="checking_7284">Adv Plus Banking (····7284)</option>
+                <option value="savings_7297">Preferred Savings (····7297)</option>
+                <option value="jhoshys_acc">Jhoshys Account</option>
+                <option value="kikis_acc">Kikis Account</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label class="form-label" for="adm-amount-input">Increase Amount ($USD)</label>
+              <input type="number" id="adm-amount-input" class="form-input" placeholder="e.g. 50000" min="1" step="100" required>
+            </div>
+
+            <button type="submit" class="btn-primary" style="width: 100%; margin-top: 8px;">Permit & Add Funds</button>
+          </form>
+        </div>
+
+
+        <div class="sidebar-card">
+          <h3 class="sidebar-card-title">Admin Quick Tools</h3>
+          <ul class="help-list">
+            <li><button id="btn-reset-balances" style="color: var(--negative);">Reset Balances to Default</button></li>
+            <li><a href="index.html">View User Dashboard</a></li>
+            <li><a href="deposit.html">View Deposit Page</a></li>
+          </ul>
+        </div>
+      </aside>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <ul class="footer-links">
+        <li><a href="index.html">Dashboard</a></li>
+        <li><a href="deposit.html">Deposit</a></li>
+        <li><a href="admin.html">Admin Panel</a></li>
+        <li><a href="help.html">Help</a></li>
+      </ul>
+      <p class="footer-note">&copy; 2026 Bank of America Corporation. Administrative Control Portal.</p>
+    </div>
+  </footer>
+
+  <script src="common.js"></script>
+  <script src="firebase-config.js"></script>
+  <script src="firebase-db.js"></script>
+  <script src="balances.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>

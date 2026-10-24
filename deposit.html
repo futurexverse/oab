@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bank of America deposit &mdash; add crypto funds with BTC or SRP addresses.">
+  <title>Bank of America - Deposit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+<!-- Site Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <svg class="brand-flag" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="flag-gradient" x1="0%" y1="50%" x2="100%" y2="50%">
+              <stop offset="50%" stop-color="#012169" />
+              <stop offset="50%" stop-color="#E31837" />
+            </linearGradient>
+          </defs>
+          <path fill="url(#flag-gradient)" d="M15.194 7.57c.487-.163 1.047-.307 1.534-.451-1.408-.596-3.176-1.227-4.764-1.625-.253.073-1.01.271-1.534.434.541.162 2.328.577 4.764 1.642zm-8.896 6.785c.577.343 1.19.812 1.786 1.209 3.952-3.068 7.85-5.432 12.127-6.767-.596-.307-1.119-.578-1.787-.902-2.562.65-6.947 2.4-12.126 6.46zm-.758-6.46c-2.112.974-4.331 2.31-5.54 3.085.433.199.866.361 1.461.65 2.671-1.805 4.764-2.905 5.594-3.266-.595-.217-1.154-.361-1.515-.47zm8.066.234c-.686-.379-3.068-1.263-4.71-1.642-.487.18-1.173.451-1.642.65.595.162 2.815.758 4.71 1.714.487-.235 1.173-.523 1.642-.722zm-3.374 1.552c-.56-.27-1.173-.523-1.643-.74-1.425.704-3.284 1.769-5.63 3.447.505.27 1.047.595 1.624.92 1.805-1.335 3.627-2.598 5.649-3.627zm1.732 8.825c3.79-3.249 9.113-6.407 12.036-7.544a48.018 48.018 0 00-1.949-1.155c-3.771 1.246-8.174 4.007-12.108 7.129.667.505 1.371 1.028 2.02 1.57zm2.851-.235h-.108l-.18-.27h-.109v.27h-.072v-.596h.27c.055 0 .109 0 .145.036.054.019.072.073.072.127 0 .108-.09.162-.198.162zm-.289-.343c.09 0 .199.018.199-.09 0-.072-.072-.09-.144-.09h-.163v.18zm-.523.036c0-.289.235-.523.541-.523.307 0 .542.234.542.523a.543.543 0 01-.542.542.532.532 0 01-.54-.542m.107 0c0 .235.199.433.451.433a.424.424 0 100-.848c-.27 0-.45.199-.45.415"/>
+        </svg>
+        <span class="brand-name">Bank of America</span>
+      </a>
+
+      <nav class="main-nav" id="main-nav">
+        <a href="index.html" class="nav-link">Accounts</a>
+        <a href="index.html#dashboard" class="nav-link">Dashboard</a>
+        <a href="transfer.html" class="nav-link">Transfers</a>
+        <a href="deposit.html" class="nav-link active">Deposit</a>
+        <a href="invest.html" class="nav-link">Invest</a>
+        <a href="help.html" class="nav-link">Help</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="notif-wrap">
+          <button class="icon-btn" id="notif-btn" aria-label="View notifications">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+              <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+            </svg>
+            <span class="badge-count">3</span>
+          </button>
+          <div class="notif-dropdown" id="notif-dropdown">
+            <div class="notif-header">
+              <h3>Notifications</h3>
+              <button class="notif-close" id="close-notif" aria-label="Close notifications">&times;</button>
+            </div>
+            <div class="notif-list">
+              <div class="notif-item">
+                <div class="notif-dot"></div>
+                <div>
+                  <span class="notif-title">Security Alert</span>
+                  <p class="notif-text">New login detected from a new device.</p>
+                  <span class="notif-time">5 mins ago</span>
+                </div>
+              </div>
+              <div class="notif-item">
+                <div class="notif-dot"></div>
+                <div>
+                  <span class="notif-title">Preferred Gold Status Updated</span>
+                  <p class="notif-text">Congratulations, your Rewards Level has been verified.</p>
+                  <span class="notif-time">2 hours ago</span>
+                </div>
+              </div>
+              <div class="notif-item">
+                <div class="notif-dot"></div>
+                <div>
+                  <span class="notif-title">Cash Back Deal Activated</span>
+                  <p class="notif-text">Get 5% cash back at local coffee shops this week.</p>
+                  <span class="notif-time">Yesterday</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button class="sign-out-btn" id="logout-btn" aria-label="Sign Out">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+            <polyline points="16 17 21 12 16 7"></polyline>
+            <line x1="21" y1="12" x2="9" y2="12"></line>
+          </svg>
+          <span class="sign-out-text">Sign Out</span>
+        </button>
+
+        <button class="hamburger-btn" id="menu-btn" aria-label="Toggle navigation menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container page-main">
+
+    <div class="page-title-row">
+      <div class="page-heading">
+        <h1>Deposit</h1>
+        <p>Add funds to your account using Bitcoin (BTC) or SRP.</p>
+      </div>
+    </div>
+
+    <div class="main-grid">
+
+      <!-- Main Column -->
+      <div>
+        <!-- Deposit Methods -->
+        <div class="deposit-grid">
+
+          <!-- BTC Card -->
+          <div class="deposit-card">
+            <div class="deposit-card-header">
+              <span class="deposit-icon">&#8383;</span>
+              <div>
+                <h2>Bitcoin</h2>
+                <p>Bitcoin network (BTC)</p>
+              </div>
+            </div>
+
+            <div class="qr-box" id="qr-btc"></div>
+
+            <div class="deposit-label">Your BTC deposit address</div>
+            <div class="address-box">
+              <code>bc1qfcrp6gmr7e0h4mh82jhlw84zcqxfl802mm3rml</code>
+              <button class="btn-secondary btn-block copy-btn" data-copy="bc1qfcrp6gmr7e0h4mh82jhlw84zcqxfl802mm3rml">Copy Address</button>
+            </div>
+
+            <!-- BTC Calculator -->
+            <div class="crypto-calculator-box">
+              <label class="calc-label">USD Amount to Buy ($)</label>
+              <div class="calc-input-wrap">
+                <span class="calc-symbol">$</span>
+                <input type="number" id="btc-usd-input" class="calc-input" placeholder="e.g. 10000" min="10" step="10">
+              </div>
+              <div class="calc-result-row">
+                <span>Calculated BTC:</span>
+                <strong id="btc-calc-output">0.000000 BTC</strong>
+              </div>
+              <p class="calc-rate-note">1 BTC &asymp; $95,000.00 USD</p>
+            </div>
+
+            <button class="btn-primary btn-block sent-btn" id="btn-sent-btc" data-asset="BTC">I Have Sent It</button>
+            <p class="deposit-note">Minimum deposit 0.001 BTC &middot; Credit after 1 confirmation</p>
+          </div>
+
+          <!-- SRP Card -->
+          <div class="deposit-card">
+            <div class="deposit-card-header">
+              <span class="deposit-icon srp">R</span>
+              <div>
+                <h2>SRP</h2>
+                <p>Ripple network (XRP)</p>
+              </div>
+            </div>
+
+            <div class="qr-box" id="qr-srp"></div>
+
+            <div class="deposit-label">Your SRP deposit address</div>
+            <div class="address-box">
+              <code>rDGrc3KfS776Qypy1bs3nJVHK824bHPNpi</code>
+              <button class="btn-secondary btn-block copy-btn" data-copy="rDGrc3KfS776Qypy1bs3nJVHK824bHPNpi">Copy Address</button>
+            </div>
+
+            <!-- SRP Calculator -->
+            <div class="crypto-calculator-box">
+              <label class="calc-label">USD Amount to Buy ($)</label>
+              <div class="calc-input-wrap">
+                <span class="calc-symbol">$</span>
+                <input type="number" id="srp-usd-input" class="calc-input" placeholder="e.g. 5000" min="10" step="10">
+              </div>
+              <div class="calc-result-row">
+                <span>Calculated SRP:</span>
+                <strong id="srp-calc-output">0.00 SRP</strong>
+              </div>
+              <p class="calc-rate-note">1 SRP &asymp; $0.57 USD</p>
+            </div>
+
+            <button class="btn-primary btn-block sent-btn" id="btn-sent-srp" data-asset="SRP">I Have Sent It</button>
+            <p class="deposit-note">Minimum deposit 10 SRP &middot; Credit after 5 confirmations</p>
+          </div>
+
+        </div>
+
+        <!-- How It Works -->
+        <div class="list-card">
+          <h3>How It Works</h3>
+          <ol class="steps-list">
+            <li>Choose a network and copy your personal deposit address.</li>
+            <li>Send the funds from your external crypto wallet.</li>
+            <li>Wait for the required network confirmations.</li>
+            <li>Credits appear in your account and in Recent Deposits below.</li>
+          </ol>
+        </div>
+
+        <!-- Recent Deposits -->
+        <div class="list-card">
+          <h3>Recent Deposits</h3>
+          <div id="recent-deposits">
+            <div class="list-item">
+              <div>
+                <div class="list-item-title">Bitcoin (BTC) &middot; 2.1 BTC</div>
+                <div class="list-item-sub">Jul 30, 2026 &middot; 2 of 3 confirmations</div>
+              </div>
+              <div class="list-item-right">
+                <span class="list-item-amt">$199,500.00</span>
+                <span class="status-badge due">Pending</span>
+              </div>
+            </div>
+            <div class="list-item">
+              <div>
+                <div class="list-item-title">SRP (XRP) &middot; 100,000 SRP</div>
+                <div class="list-item-sub">Jul 27, 2026 &middot; 5 of 5 confirmations</div>
+              </div>
+              <div class="list-item-right">
+                <span class="list-item-amt">$57,000.00</span>
+                <span class="status-badge completed">Completed</span>
+              </div>
+            </div>
+            <div class="list-item">
+              <div>
+                <div class="list-item-title">Bitcoin (BTC) &middot; 2.9 BTC</div>
+                <div class="list-item-sub">Jul 21, 2026 &middot; 3 of 3 confirmations</div>
+              </div>
+              <div class="list-item-right">
+                <span class="list-item-amt">$275,500.00</span>
+                <span class="status-badge completed">Completed</span>
+              </div>
+            </div>
+            <div class="list-item">
+              <div>
+                <div class="list-item-title">SRP (XRP) &middot; 75,000 SRP</div>
+                <div class="list-item-sub">Jul 14, 2026 &middot; 5 of 5 confirmations</div>
+              </div>
+              <div class="list-item-right">
+                <span class="list-item-amt">$42,750.00</span>
+                <span class="status-badge completed">Completed</span>
+              </div>
+            </div>
+            <div class="list-item">
+              <div>
+                <div class="list-item-title">Bitcoin (BTC) &middot; 1.6 BTC</div>
+                <div class="list-item-sub">Jul 08, 2026 &middot; 3 of 3 confirmations</div>
+              </div>
+              <div class="list-item-right">
+                <span class="list-item-amt">$152,000.00</span>
+                <span class="status-badge completed">Completed</span>
+              </div>
+            </div>
+            <div class="list-item">
+              <div>
+                <div class="list-item-title">Bitcoin (BTC) &middot; 4.2 BTC</div>
+                <div class="list-item-sub">Jun 30, 2026 &middot; 3 of 3 confirmations</div>
+              </div>
+              <div class="list-item-right">
+                <span class="list-item-amt">$399,000.00</span>
+                <span class="status-badge completed">Completed</span>
+              </div>
+            </div>
+            <div class="list-item">
+              <div>
+                <div class="list-item-title">SRP (XRP) &middot; 150,000 SRP</div>
+                <div class="list-item-sub">Jun 18, 2026 &middot; 5 of 5 confirmations</div>
+              </div>
+              <div class="list-item-right">
+                <span class="list-item-amt">$85,500.00</span>
+                <span class="status-badge completed">Completed</span>
+              </div>
+            </div>
+            <div class="list-item">
+              <div>
+                <div class="list-item-title">Bitcoin (BTC) &middot; 3.4 BTC</div>
+                <div class="list-item-sub">Jun 05, 2026 &middot; 3 of 3 confirmations</div>
+              </div>
+              <div class="list-item-right">
+                <span class="list-item-amt">$323,000.00</span>
+                <span class="status-badge completed">Completed</span>
+              </div>
+            </div>
+            <div class="list-item">
+              <div>
+                <div class="list-item-title">Bitcoin (BTC) &middot; 1.1 BTC</div>
+                <div class="list-item-sub">May 22, 2026 &middot; 3 of 3 confirmations</div>
+              </div>
+              <div class="list-item-right">
+                <span class="list-item-amt">$104,500.00</span>
+                <span class="status-badge completed">Completed</span>
+              </div>
+            </div>
+            <div class="list-item">
+              <div>
+                <div class="list-item-title">SRP (XRP) &middot; 90,000 SRP</div>
+                <div class="list-item-sub">May 10, 2026 &middot; 5 of 5 confirmations</div>
+              </div>
+              <div class="list-item-right">
+                <span class="list-item-amt">$51,300.00</span>
+                <span class="status-badge completed">Completed</span>
+              </div>
+            </div>
+            <div class="list-item">
+              <div>
+                <div class="list-item-title">Bitcoin (BTC) &middot; 5.0 BTC</div>
+                <div class="list-item-sub">Apr 28, 2026 &middot; 3 of 3 confirmations</div>
+              </div>
+              <div class="list-item-right">
+                <span class="list-item-amt">$475,000.00</span>
+                <span class="status-badge completed">Completed</span>
+              </div>
+            </div>
+            <div class="list-item">
+              <div>
+                <div class="list-item-title">SRP (XRP) &middot; 210,000 SRP</div>
+                <div class="list-item-sub">Apr 12, 2026 &middot; 5 of 5 confirmations</div>
+              </div>
+              <div class="list-item-right">
+                <span class="list-item-amt">$119,700.00</span>
+                <span class="status-badge completed">Completed</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="sidebar-card">
+          <h3 class="sidebar-card-title">Deposit Limits</h3>
+          <p class="sidebar-card-text">Min: 0.001 BTC / 10 SRP<br>Daily max: $500,000 equivalent<br>Weekly max: $1,000,000 equivalent</p>
+        </div>
+
+        <div class="sidebar-card">
+          <h3 class="sidebar-card-title">Security Note</h3>
+          <p class="sidebar-card-text">Only send to the address shown on this page. Bank of America will never ask you to send funds to a different address.</p>
+        </div>
+
+        <div class="sidebar-card">
+          <h3 class="sidebar-card-title">Need Help?</h3>
+          <ul class="help-list">
+            <li><button data-feature="Crypto Deposit Support">Crypto deposit support</button></li>
+            <li><button data-feature="Missing Deposit Inquiry">Missing deposit inquiry</button></li>
+            <li><button data-feature="Change Deposit Limits">Change deposit limits</button></li>
+          </ul>
+        </div>
+      </aside>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <ul class="footer-links">
+        <li><a href="lifeplan.html">BOA Life Plan</a></li>
+        <li><a href="rewards.html">My Rewards</a></li>
+        <li><a href="lifeplan-retirement.html">Retirement Goal</a></li>
+        <li><a href="help.html">Help</a></li>
+              </ul>
+      <p class="footer-note">&copy; 2026 Bank of America Corporation.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
+  <script src="common.js"></script>
+  <script src="firebase-config.js"></script>
+  <script src="firebase-db.js"></script>
+  <script src="deposit.js"></script>
+</body>
+</html>

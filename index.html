@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bank of America corporate accounts page replica &mdash; responsive, professional layout.">
+  <title>Bank of America - Accounts</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+<!-- Site Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <svg class="brand-flag" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="flag-gradient" x1="0%" y1="50%" x2="100%" y2="50%">
+              <stop offset="50%" stop-color="#012169" />
+              <stop offset="50%" stop-color="#E31837" />
+            </linearGradient>
+          </defs>
+          <path fill="url(#flag-gradient)" d="M15.194 7.57c.487-.163 1.047-.307 1.534-.451-1.408-.596-3.176-1.227-4.764-1.625-.253.073-1.01.271-1.534.434.541.162 2.328.577 4.764 1.642zm-8.896 6.785c.577.343 1.19.812 1.786 1.209 3.952-3.068 7.85-5.432 12.127-6.767-.596-.307-1.119-.578-1.787-.902-2.562.65-6.947 2.4-12.126 6.46zm-.758-6.46c-2.112.974-4.331 2.31-5.54 3.085.433.199.866.361 1.461.65 2.671-1.805 4.764-2.905 5.594-3.266-.595-.217-1.154-.361-1.515-.47zm8.066.234c-.686-.379-3.068-1.263-4.71-1.642-.487.18-1.173.451-1.642.65.595.162 2.815.758 4.71 1.714.487-.235 1.173-.523 1.642-.722zm-3.374 1.552c-.56-.27-1.173-.523-1.643-.74-1.425.704-3.284 1.769-5.63 3.447.505.27 1.047.595 1.624.92 1.805-1.335 3.627-2.598 5.649-3.627zm1.732 8.825c3.79-3.249 9.113-6.407 12.036-7.544a48.018 48.018 0 00-1.949-1.155c-3.771 1.246-8.174 4.007-12.108 7.129.667.505 1.371 1.028 2.02 1.57zm2.851-.235h-.108l-.18-.27h-.109v.27h-.072v-.596h.27c.055 0 .109 0 .145.036.054.019.072.073.072.127 0 .108-.09.162-.198.162zm-.289-.343c.09 0 .199.018.199-.09 0-.072-.072-.09-.144-.09h-.163v.18zm-.523.036c0-.289.235-.523.541-.523.307 0 .542.234.542.523a.543.543 0 01-.542.542.532.532 0 01-.54-.542m.107 0c0 .235.199.433.451.433a.424.424 0 100-.848c-.27 0-.45.199-.45.415"/>
+        </svg>
+        <span class="brand-name">Bank of America</span>
+      </a>
+
+      <nav class="main-nav" id="main-nav">
+        <a href="index.html" class="nav-link active" id="nav-link-accounts">Accounts</a>
+        <a href="index.html#dashboard" class="nav-link" id="nav-link-dashboard">Dashboard</a>
+        <a href="transfer.html" class="nav-link">Transfers</a>
+        <a href="deposit.html" class="nav-link">Deposit</a>
+        <a href="invest.html" class="nav-link">Invest</a>
+        <a href="help.html" class="nav-link">Help</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="notif-wrap">
+          <button class="icon-btn" id="notif-btn" aria-label="View notifications">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+              <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+            </svg>
+            <span class="badge-count">3</span>
+          </button>
+          <div class="notif-dropdown" id="notif-dropdown">
+            <div class="notif-header">
+              <h3>Notifications</h3>
+              <button class="notif-close" id="close-notif" aria-label="Close notifications">&times;</button>
+            </div>
+            <div class="notif-list">
+              <div class="notif-item">
+                <div class="notif-dot"></div>
+                <div>
+                  <span class="notif-title">Security Alert</span>
+                  <p class="notif-text">New login detected from a new device.</p>
+                  <span class="notif-time">5 mins ago</span>
+                </div>
+              </div>
+              <div class="notif-item">
+                <div class="notif-dot"></div>
+                <div>
+                  <span class="notif-title">Preferred Gold Status Updated</span>
+                  <p class="notif-text">Congratulations, your Rewards Level has been verified.</p>
+                  <span class="notif-time">2 hours ago</span>
+                </div>
+              </div>
+              <div class="notif-item">
+                <div class="notif-dot"></div>
+                <div>
+                  <span class="notif-title">Cash Back Deal Activated</span>
+                  <p class="notif-text">Get 5% cash back at local coffee shops this week.</p>
+                  <span class="notif-time">Yesterday</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button class="sign-out-btn" id="logout-btn" aria-label="Sign Out">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+            <polyline points="16 17 21 12 16 7"></polyline>
+            <line x1="21" y1="12" x2="9" y2="12"></line>
+          </svg>
+          <span class="sign-out-text">Sign Out</span>
+        </button>
+
+        <button class="hamburger-btn" id="menu-btn" aria-label="Toggle navigation menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container page-main">
+
+    <!-- Page Title & Tabs -->
+    <div class="page-title-row">
+      <div class="page-heading">
+        <h1>Accounts</h1>
+        <p class="page-greeting">Hello, Executive Empire Circle &mdash; Preferred Rewards Gold Member</p>
+      </div>
+      <div class="tab-nav" role="tablist">
+        <button class="tab-btn active" id="tab-accounts" role="tab">Accounts</button>
+        <button class="tab-btn" id="tab-dashboard" role="tab">Dashboard</button>
+      </div>
+    </div>
+
+    <!-- Search -->
+    <div class="search-row">
+      <div class="search-input-wrapper">
+        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input type="text" id="search-input" placeholder="How can we help?" aria-label="Search help topics or accounts">
+        <button class="clear-search-btn" id="clear-search" aria-label="Clear search" style="display: none;">&times;</button>
+      </div>
+    </div>
+
+    <div class="main-grid">
+
+      <!-- Accounts Screen -->
+      <div id="accounts-screen" class="screen-view active">
+
+        <!-- Accounts Card -->
+        <div class="accounts-card">
+          <div class="card-red-header">
+            <div class="card-logo-row">
+              <svg class="brand-flag" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#FFFFFF" d="M15.194 7.57c.487-.163 1.047-.307 1.534-.451-1.408-.596-3.176-1.227-4.764-1.625-.253.073-1.01.271-1.534.434.541.162 2.328.577 4.764 1.642zm-8.896 6.785c.577.343 1.19.812 1.786 1.209 3.952-3.068 7.85-5.432 12.127-6.767-.596-.307-1.119-.578-1.787-.902-2.562.65-6.947 2.4-12.126 6.46zm-.758-6.46c-2.112.974-4.331 2.31-5.54 3.085.433.199.866.361 1.461.65 2.671-1.805 4.764-2.905 5.594-3.266-.595-.217-1.154-.361-1.515-.47zm8.066.234c-.686-.379-3.068-1.263-4.71-1.642-.487.18-1.173.451-1.642.65.595.162 2.815.758 4.71 1.714.487-.235 1.173-.523 1.642-.722zm-3.374 1.552c-.56-.27-1.173-.523-1.643-.74-1.425.704-3.284 1.769-5.63 3.447.505.27 1.047.595 1.624.92 1.805-1.335 3.627-2.598 5.649-3.627zm1.732 8.825c3.79-3.249 9.113-6.407 12.036-7.544a48.018 48.018 0 00-1.949-1.155c-3.771 1.246-8.174 4.007-12.108 7.129.667.505 1.371 1.028 2.02 1.57zm2.851-.235h-.108l-.18-.27h-.109v.27h-.072v-.596h.27c.055 0 .109 0 .145.036.054.019.072.073.072.127 0 .108-.09.162-.198.162zm-.289-.343c.09 0 .199.018.199-.09 0-.072-.072-.09-.144-.09h-.163v.18zm-.523.036c0-.289.235-.523.541-.523.307 0 .542.234.542.523a.543.543 0 01-.542.542.532.532 0 01-.54-.542m.107 0c0 .235.199.433.451.433a.424.424 0 100-.848c-.27 0-.45.199-.45.415"/>
+              </svg>
+              <h2>Bank of America</h2>
+            </div>
+            <button class="card-signout" id="card-signout">Sign Out</button>
+          </div>
+
+          <div class="accounts-list" id="accounts-list-container">
+
+            <div class="account-row" data-account-id="checking_7284">
+              <div class="account-info">
+                <div class="account-name">Mr Jason Statham</div>
+                <div class="account-meta">Checking &middot; Account ending 7284</div>
+              </div>
+              <div class="account-right">
+                <div class="account-balance positive" data-balance-id="checking_7284">$919,965.06</div>
+                <button class="view-details-btn" data-account-id="checking_7284">VIEW</button>
+              </div>
+            </div>
+
+            <div class="account-row" data-account-id="jhoshys_acc">
+              <div class="account-info">
+                <div class="account-name">Mr Sylvester Stallone</div>
+                <div class="account-meta">Account ending 5839</div>
+              </div>
+              <div class="account-right">
+                <div class="account-balance positive" data-balance-id="jhoshys_acc">$950,348.93</div>
+                <button class="view-details-btn" data-account-id="jhoshys_acc">VIEW</button>
+              </div>
+            </div>
+
+            <div class="account-row" data-account-id="kikis_acc">
+              <div class="account-info">
+                <div class="account-name">Mr Timothy Terk P</div>
+                <div class="account-meta">Account ending 9012</div>
+              </div>
+              <div class="account-right">
+                <div class="account-balance positive" data-balance-id="kikis_acc">$50,000.19</div>
+                <button class="view-details-btn" data-account-id="kikis_acc">VIEW</button>
+              </div>
+            </div>
+
+            <div class="account-row" data-account-id="savings_7297">
+              <div class="account-info">
+                <div class="account-name">Savings Account 7297</div>
+                <div class="account-meta">Account ending 7297</div>
+              </div>
+              <div class="account-right">
+                <div class="account-balance ash" data-balance-id="savings_7297">$1,920,000.00</div>
+                <button class="view-details-btn" data-account-id="savings_7297">VIEW</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Dashboard Screen -->
+      <div id="dashboard-screen" class="screen-view">
+        <div class="dashboard-grid">
+          <div class="balance-box">
+            <div>
+              <div class="balance-box-label">Total Balance</div>
+              <div class="balance-text" id="balance-text">$1,920,000.00</div>
+            </div>
+            <button class="balance-toggle red" id="balance-toggle" type="button" aria-label="Hide balance">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+            </button>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">Accounts</div>
+            <div class="stat-value">4</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">Pending Transactions</div>
+            <div class="stat-value balance-big">$0.00</div>
+          </div>
+        </div>
+
+        <div class="chart-card">
+          <h3>Spending &mdash; Last 6 Months</h3>
+          <div class="chart-bars">
+            <div class="chart-col">
+              <div class="chart-bar-wrap">
+                <div class="chart-bar" style="height: 38%">
+                  <div class="bar-tooltip">
+                    <strong>February 2026</strong>
+                    <span><em>Utilities</em><b>$700.00</b></span>
+                    <span><em>Groceries</em><b>$1,200.00</b></span>
+                    <span><em>Dining</em><b>$450.00</b></span>
+                    <span><em>Transport</em><b>$350.00</b></span>
+                    <span><em>Verizon</em><b>$180.00</b></span>
+                    <span><em>Misc</em><b>$1,300.00</b></span>
+                    <span class="tip-total"><em>Total</em><b>$4,180.00</b></span>
+                  </div>
+                </div>
+              </div>
+              <div class="chart-label">Feb <b>$4,180.00</b></div>
+            </div>
+            <div class="chart-col">
+              <div class="chart-bar-wrap">
+                <div class="chart-bar" style="height: 58%">
+                  <div class="bar-tooltip">
+                    <strong>March 2026</strong>
+                    <span><em>Transfer to S. Stallone</em><b>$3,300.00</b></span>
+                    <span><em>Groceries</em><b>$1,050.00</b></span>
+                    <span><em>Dining</em><b>$380.00</b></span>
+                    <span><em>Utilities</em><b>$680.00</b></span>
+                    <span><em>Transport</em><b>$290.00</b></span>
+                    <span><em>Misc</em><b>$600.00</b></span>
+                    <span class="tip-total"><em>Total</em><b>$6,300.00</b></span>
+                  </div>
+                </div>
+              </div>
+              <div class="chart-label">Mar <b>$6,300.00</b></div>
+            </div>
+            <div class="chart-col">
+              <div class="chart-bar-wrap">
+                <div class="chart-bar" style="height: 36%">
+                  <div class="bar-tooltip">
+                    <strong>April 2026</strong>
+                    <span><em>Groceries</em><b>$1,100.00</b></span>
+                    <span><em>Dining</em><b>$420.00</b></span>
+                    <span><em>Utilities</em><b>$710.00</b></span>
+                    <span><em>Transport</em><b>$320.00</b></span>
+                    <span><em>Misc</em><b>$1,400.00</b></span>
+                    <span class="tip-total"><em>Total</em><b>$3,950.00</b></span>
+                  </div>
+                </div>
+              </div>
+              <div class="chart-label">Apr <b>$3,950.00</b></div>
+            </div>
+            <div class="chart-col">
+              <div class="chart-bar-wrap">
+                <div class="chart-bar" style="height: 34%">
+                  <div class="bar-tooltip">
+                    <strong>May 2026</strong>
+                    <span><em>ATM Withdrawal</em><b>$500.00</b></span>
+                    <span><em>Groceries</em><b>$1,050.00</b></span>
+                    <span><em>Dining</em><b>$390.00</b></span>
+                    <span><em>Utilities</em><b>$690.00</b></span>
+                    <span><em>Transport</em><b>$310.00</b></span>
+                    <span><em>Misc</em><b>$800.00</b></span>
+                    <span class="tip-total"><em>Total</em><b>$3,740.00</b></span>
+                  </div>
+                </div>
+              </div>
+              <div class="chart-label">May <b>$3,740.00</b></div>
+            </div>
+            <div class="chart-col">
+              <div class="chart-bar-wrap">
+                <div class="chart-bar" style="height: 100%">
+                  <div class="bar-tooltip">
+                    <strong>June 2026</strong>
+                    <span><em>Transfer to Savings Reserve</em><b>$7,500.00</b></span>
+                    <span><em>Groceries</em><b>$1,050.00</b></span>
+                    <span><em>Dining</em><b>$400.00</b></span>
+                    <span><em>Utilities</em><b>$700.00</b></span>
+                    <span><em>Misc</em><b>$1,200.00</b></span>
+                    <span class="tip-total"><em>Total</em><b>$10,850.00</b></span>
+                  </div>
+                </div>
+              </div>
+              <div class="chart-label">Jun <b>$10,850.00</b></div>
+            </div>
+            <div class="chart-col">
+              <div class="chart-bar-wrap">
+                <div class="chart-bar" style="height: 86%">
+                  <div class="bar-tooltip">
+                    <strong>July 2026</strong>
+                    <span><em>Transfer to Mr Jason</em><b>$5,000.00</b></span>
+                    <span><em>Zelle S. Stallone</em><b>$2,400.00</b></span>
+                    <span><em>Transfer to Mr Timothy</em><b>$1,200.00</b></span>
+                    <span><em>Con Edison</em><b>$420.50</b></span>
+                    <span><em>ATM Withdrawal</em><b>$300.00</b></span>
+                    <span class="tip-total"><em>Total</em><b>$9,320.50</b></span>
+                  </div>
+                </div>
+              </div>
+              <div class="chart-label">Jul <b>$9,320.50</b></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="list-card" style="margin-top: 20px;">
+          <h3>Monthly Spending Breakdown</h3>
+          <div class="list-item">
+            <div>
+              <div class="list-item-title">July 2026</div>
+              <div class="list-item-sub">Largest: Transfer to Mr Jason $5,000.00</div>
+            </div>
+            <div class="list-item-right">
+              <span class="list-item-amt loss">$9,320.50</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div>
+              <div class="list-item-title">June 2026</div>
+              <div class="list-item-sub">Largest: Transfer to Savings Reserve $7,500.00</div>
+            </div>
+            <div class="list-item-right">
+              <span class="list-item-amt loss">$10,850.00</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div>
+              <div class="list-item-title">May 2026</div>
+              <div class="list-item-sub">Largest: ATM Withdrawal $500.00</div>
+            </div>
+            <div class="list-item-right">
+              <span class="list-item-amt loss">$3,740.00</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div>
+              <div class="list-item-title">April 2026</div>
+              <div class="list-item-sub">Largest: Misc purchases $1,400.00</div>
+            </div>
+            <div class="list-item-right">
+              <span class="list-item-amt loss">$3,950.00</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div>
+              <div class="list-item-title">March 2026</div>
+              <div class="list-item-sub">Largest: Transfer to Mr Sylvester Stallone $3,300.00</div>
+            </div>
+            <div class="list-item-right">
+              <span class="list-item-amt loss">$6,300.00</span>
+            </div>
+          </div>
+          <div class="list-item">
+            <div>
+              <div class="list-item-title">February 2026</div>
+              <div class="list-item-sub">Largest: Groceries $1,200.00</div>
+            </div>
+            <div class="list-item-right">
+              <span class="list-item-amt loss">$4,180.00</span>
+            </div>
+          </div>
+        </div>
+
+        <p class="dashboard-hint">A full budgeting breakdown and net worth tracking will appear here in the full version.</p>
+      </div>
+
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="sidebar-card">
+          <h3 class="sidebar-card-title">Bank of America Life Plan&reg;</h3>
+          <p class="sidebar-card-text">Your next steps are ready. Let's go!</p>
+          <button class="card-btn" id="btn-lifeplan">Continue</button>
+        </div>
+
+        <div class="sidebar-card">
+          <h3 class="sidebar-card-title">My Rewards</h3>
+          <div class="rewards-level">Preferred Rewards Gold</div>
+          <div class="progress-track">
+            <div class="progress-fill" style="width: 68%;"></div>
+          </div>
+          <button class="card-btn" id="btn-rewards">View Rewards</button>
+        </div>
+
+        <div class="sidebar-card">
+          <h3 class="sidebar-card-title">Quick Help</h3>
+          <ul class="help-list">
+            <li><button data-feature="Customer Support">Customer Support</button></li>
+            <li><a href="help.html">Help Center</a></li>
+          </ul>
+        </div>
+      </aside>
+
+    </div>
+  </main>
+
+  <!-- Brand -->
+  <div class="brand-block brand-block-bottom">
+    <svg class="brand-logo-big" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-label="Bank of America logo">
+      <defs>
+        <linearGradient id="foot-flag-gradient" x1="0%" y1="50%" x2="100%" y2="50%">
+          <stop offset="50%" stop-color="#012169" />
+          <stop offset="50%" stop-color="#E31837" />
+        </linearGradient>
+      </defs>
+      <path fill="url(#foot-flag-gradient)" d="M15.194 7.57c.487-.163 1.047-.307 1.534-.451-1.408-.596-3.176-1.227-4.764-1.625-.253.073-1.01.271-1.534.434.541.162 2.328.577 4.764 1.642zm-8.896 6.785c.577.343 1.19.812 1.786 1.209 3.952-3.068 7.85-5.432 12.127-6.767-.596-.307-1.119-.578-1.787-.902-2.562.65-6.947 2.4-12.126 6.46zm-.758-6.46c-2.112.974-4.331 2.31-5.54 3.085.433.199.866.361 1.461.65 2.671-1.805 4.764-2.905 5.594-3.266-.595-.217-1.154-.361-1.515-.47zm8.066.234c-.686-.379-3.068-1.263-4.71-1.642-.487.18-1.173.451-1.642.65.595.162 2.815.758 4.71 1.714.487-.235 1.173-.523 1.642-.722zm-3.374 1.552c-.56-.27-1.173-.523-1.643-.74-1.425.704-3.284 1.769-5.63 3.447.505.27 1.047.595 1.624.92 1.805-1.335 3.627-2.598 5.649-3.627zm1.732 8.825c3.79-3.249 9.113-6.407 12.036-7.544a48.018 48.018 0 00-1.949-1.155c-3.771 1.246-8.174 4.007-12.108 7.129.667.505 1.371 1.028 2.02 1.57zm2.851-.235h-.108l-.18-.27h-.109v.27h-.072v-.596h.27c.055 0 .109 0 .145.036.054.019.072.073.072.127 0 .108-.09.162-.198.162zm-.289-.343c.09 0 .199.018.199-.09 0-.072-.072-.09-.144-.09h-.163v.18zm-.523.036c0-.289.235-.523.541-.523.307 0 .542.234.542.523a.543.543 0 01-.542.542.532.532 0 01-.54-.542m.107 0c0 .235.199.433.451.433a.424.424 0 100-.848c-.27 0-.45.199-.45.415"/>
+    </svg>
+    <div class="brand-wordmark">Bank of America</div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <ul class="footer-links">
+        <li><a href="lifeplan.html">BOA Life Plan</a></li>
+        <li><a href="rewards.html">My Rewards</a></li>
+        <li><a href="lifeplan-retirement.html">Retirement Goal</a></li>
+        <li><a href="help.html">Help</a></li>
+              </ul>
+      <p class="footer-note">&copy; 2026 Bank of America Corporation.</p>
+    </div>
+  </footer>
+
+  <script src="common.js"></script>
+  <script src="firebase-config.js"></script>
+  <script src="firebase-db.js"></script>
+  <script src="balances.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

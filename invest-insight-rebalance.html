@@ -1,0 +1,168 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bank of America invest &mdash; Rebalance suggestion.">
+  <title>Bank of America - Rebalance Suggestion</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+<!-- Site Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <svg class="brand-flag" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="flag-gradient" x1="0%" y1="50%" x2="100%" y2="50%">
+              <stop offset="50%" stop-color="#012169" />
+              <stop offset="50%" stop-color="#E31837" />
+            </linearGradient>
+          </defs>
+          <path fill="url(#flag-gradient)" d="M15.194 7.57c.487-.163 1.047-.307 1.534-.451-1.408-.596-3.176-1.227-4.764-1.625-.253.073-1.01.271-1.534.434.541.162 2.328.577 4.764 1.642zm-8.896 6.785c.577.343 1.19.812 1.786 1.209 3.952-3.068 7.85-5.432 12.127-6.767-.596-.307-1.119-.578-1.787-.902-2.562.65-6.947 2.4-12.126 6.46zm-.758-6.46c-2.112.974-4.331 2.31-5.54 3.085.433.199.866.361 1.461.65 2.671-1.805 4.764-2.905 5.594-3.266-.595-.217-1.154-.361-1.515-.47zm8.066.234c-.686-.379-3.068-1.263-4.71-1.642-.487.18-1.173.451-1.642.65.595.162 2.815.758 4.71 1.714.487-.235 1.173-.523 1.642-.722zm-3.374 1.552c-.56-.27-1.173-.523-1.643-.74-1.425.704-3.284 1.769-5.63 3.447.505.27 1.047.595 1.624.92 1.805-1.335 3.627-2.598 5.649-3.627zm1.732 8.825c3.79-3.249 9.113-6.407 12.036-7.544a48.018 48.018 0 00-1.949-1.155c-3.771 1.246-8.174 4.007-12.108 7.129.667.505 1.371 1.028 2.02 1.57zm2.851-.235h-.108l-.18-.27h-.109v.27h-.072v-.596h.27c.055 0 .109 0 .145.036.054.019.072.073.072.127 0 .108-.09.162-.198.162zm-.289-.343c.09 0 .199.018.199-.09 0-.072-.072-.09-.144-.09h-.163v.18zm-.523.036c0-.289.235-.523.541-.523.307 0 .542.234.542.523a.543.543 0 01-.542.542.532.532 0 01-.54-.542m.107 0c0 .235.199.433.451.433a.424.424 0 100-.848c-.27 0-.45.199-.45.415"/>
+        </svg>
+        <span class="brand-name">Bank of America</span>
+      </a>
+
+      <nav class="main-nav" id="main-nav">
+        <a href="index.html" class="nav-link">Accounts</a>
+        <a href="index.html#dashboard" class="nav-link">Dashboard</a>
+        <a href="transfer.html" class="nav-link">Transfers</a>
+        <a href="deposit.html" class="nav-link">Deposit</a>
+        <a href="invest.html" class="nav-link">Invest</a>
+        <a href="help.html" class="nav-link">Help</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="notif-wrap">
+          <button class="icon-btn" id="notif-btn" aria-label="View notifications">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+              <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+            </svg>
+            <span class="badge-count">3</span>
+          </button>
+          <div class="notif-dropdown" id="notif-dropdown">
+            <div class="notif-header">
+              <h3>Notifications</h3>
+              <button class="notif-close" id="close-notif" aria-label="Close notifications">&times;</button>
+            </div>
+            <div class="notif-list">
+              <div class="notif-item">
+                <div class="notif-dot"></div>
+                <div>
+                  <span class="notif-title">Security Alert</span>
+                  <p class="notif-text">New login detected from a new device.</p>
+                  <span class="notif-time">5 mins ago</span>
+                </div>
+              </div>
+              <div class="notif-item">
+                <div class="notif-dot"></div>
+                <div>
+                  <span class="notif-title">Preferred Gold Status Updated</span>
+                  <p class="notif-text">Congratulations, your Rewards Level has been verified.</p>
+                  <span class="notif-time">2 hours ago</span>
+                </div>
+              </div>
+              <div class="notif-item">
+                <div class="notif-dot"></div>
+                <div>
+                  <span class="notif-title">Cash Back Deal Activated</span>
+                  <p class="notif-text">Get 5% cash back at local coffee shops this week.</p>
+                  <span class="notif-time">Yesterday</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button class="sign-out-btn" id="logout-btn" aria-label="Sign Out">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+            <polyline points="16 17 21 12 16 7"></polyline>
+            <line x1="21" y1="12" x2="9" y2="12"></line>
+          </svg>
+          <span class="sign-out-text">Sign Out</span>
+        </button>
+
+        <button class="hamburger-btn" id="menu-btn" aria-label="Toggle navigation menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container page-main">
+
+    <div class="page-title-row">
+      <div class="page-heading">
+        <h1>Rebalance Suggestion</h1>
+        <p><a href="invest.html">&larr; Back to Invest</a> &middot; Generated July 31, 2026</p>
+      </div>
+    </div>
+
+    <div class="main-grid">
+
+      <!-- Main Column -->
+      <div>
+        <div class="form-card">
+          <h2>Why a Rebalance Is Suggested</h2>
+          <p class="form-card-sub">Your portfolio has drifted from its target allocation due to strong equity gains.</p>
+          <p class="sidebar-card-text">&bull; Equities now represent 86% of your portfolio<br>&bull; Target allocation: 70% equities, 30% fixed income<br>&bull; Fixed income has fallen to 14% of the portfolio<br>&bull; No action is required &mdash; this is a suggested review</p>
+        </div>
+
+        <div class="form-card">
+          <h2>Suggested Adjustments</h2>
+          <p class="form-card-sub">If you choose to rebalance, the plan would look like this.</p>
+          <p class="sidebar-card-text">&bull; Move $7,240.00 from equities into fixed income<br>&bull; Redirect new contributions to BND and TIP over 6 months<br>&bull; Rebalance gradually to avoid transaction costs<br>&bull; Target mix after rebalance: 70 / 30</p>
+        </div>
+
+        <div class="form-card">
+          <h2>When to Act</h2>
+          <p class="form-card-sub">Your advisor reviews the suggestion each quarter.</p>
+          <p class="sidebar-card-text">&bull; Next scheduled review: October 2026<br>&bull; Rebalancing is free for Preferred Rewards members<br>&bull; No deadline &mdash; the current drift is within acceptable range</p>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="sidebar-card">
+          <h3 class="sidebar-card-title">Current Mix</h3>
+          <p class="sidebar-card-text">VOO 36.5% &middot; AAPL 13.5% &middot; VXUS 12.5% &middot; MSFT 10.5% &middot; BND 9% &middot; JNJ 7% &middot; VNQ 6% &middot; TIP 5% (before rebalance)</p>
+        </div>
+
+        <div class="sidebar-card">
+          <h3 class="sidebar-card-title">Note</h3>
+          <p class="sidebar-card-text">A rebalance is only a suggestion. Market movements may resolve the drift on their own.</p>
+        </div>
+      </aside>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <ul class="footer-links">
+        <li><a href="lifeplan.html">BOA Life Plan</a></li>
+        <li><a href="rewards.html">My Rewards</a></li>
+        <li><a href="lifeplan-retirement.html">Retirement Goal</a></li>
+        <li><a href="help.html">Help</a></li>
+              </ul>
+      <p class="footer-note">&copy; 2026 Bank of America Corporation.</p>
+    </div>
+  </footer>
+
+  <script src="common.js"></script>
+  <script src="invest.js"></script>
+</body>
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bank of America account profile - joint account details, account holders and contact information.">
+  <title>Bank of America - Account Profile</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+<!-- Site Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <svg class="brand-flag" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="flag-gradient" x1="0%" y1="50%" x2="100%" y2="50%">
+              <stop offset="50%" stop-color="#012169" />
+              <stop offset="50%" stop-color="#E31837" />
+            </linearGradient>
+          </defs>
+          <path fill="url(#flag-gradient)" d="M15.194 7.57c.487-.163 1.047-.307 1.534-.451-1.408-.596-3.176-1.227-4.764-1.625-.253.073-1.01.271-1.534.434.541.162 2.328.577 4.764 1.642zm-8.896 6.785c.577.343 1.19.812 1.786 1.209 3.952-3.068 7.85-5.432 12.127-6.767-.596-.307-1.119-.578-1.787-.902-2.562.65-6.947 2.4-12.126 6.46zm-.758-6.46c-2.112.974-4.331 2.31-5.54 3.085.433.199.866.361 1.461.65 2.671-1.805 4.764-2.905 5.594-3.266-.595-.217-1.154-.361-1.515-.47zm8.066.234c-.686-.379-3.068-1.263-4.71-1.642-.487.18-1.173.451-1.642.65.595.162 2.815.758 4.71 1.714.487-.235 1.173-.523 1.642-.722zm-3.374 1.552c-.56-.27-1.173-.523-1.643-.74-1.425.704-3.284 1.769-5.63 3.447.505.27 1.047.595 1.624.92 1.805-1.335 3.627-2.598 5.649-3.627zm1.732 8.825c3.79-3.249 9.113-6.407 12.036-7.544a48.018 48.018 0 00-1.949-1.155c-3.771 1.246-8.174 4.007-12.108 7.129.667.505 1.371 1.028 2.02 1.57zm2.851-.235h-.108l-.18-.27h-.109v.27h-.072v-.596h.27c.055 0 .109 0 .145.036.054.019.072.073.072.127 0 .108-.09.162-.198.162zm-.289-.343c.09 0 .199.018.199-.09 0-.072-.072-.09-.144-.09h-.163v.18zm-.523.036c0-.289.235-.523.541-.523.307 0 .542.234.542.523a.543.543 0 01-.542.542.532.532 0 01-.54-.542m.107 0c0 .235.199.433.451.433a.424.424 0 100-.848c-.27 0-.45.199-.45.415"/>
+        </svg>
+        <span class="brand-name">Bank of America</span>
+      </a>
+
+      <nav class="main-nav" id="main-nav">
+        <a href="index.html" class="nav-link">Accounts</a>
+        <a href="index.html#dashboard" class="nav-link">Dashboard</a>
+        <a href="transfer.html" class="nav-link">Transfers</a>
+        <a href="deposit.html" class="nav-link">Deposit</a>
+        <a href="invest.html" class="nav-link">Invest</a>
+        <a href="help.html" class="nav-link">Help</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="notif-wrap">
+          <button class="icon-btn" id="notif-btn" aria-label="View notifications">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+              <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+            </svg>
+            <span class="badge-count">3</span>
+          </button>
+          <div class="notif-dropdown" id="notif-dropdown">
+            <div class="notif-header">
+              <h3>Notifications</h3>
+              <button class="notif-close" id="close-notif" aria-label="Close notifications">&times;</button>
+            </div>
+            <div class="notif-list">
+              <div class="notif-item">
+                <div class="notif-dot"></div>
+                <div>
+                  <span class="notif-title">Security Alert</span>
+                  <p class="notif-text">New login detected from a new device.</p>
+                  <span class="notif-time">5 mins ago</span>
+                </div>
+              </div>
+              <div class="notif-item">
+                <div class="notif-dot"></div>
+                <div>
+                  <span class="notif-title">Preferred Gold Status Updated</span>
+                  <p class="notif-text">Congratulations, your Rewards Level has been verified.</p>
+                  <span class="notif-time">2 hours ago</span>
+                </div>
+              </div>
+              <div class="notif-item">
+                <div class="notif-dot"></div>
+                <div>
+                  <span class="notif-title">Cash Back Deal Activated</span>
+                  <p class="notif-text">Get 5% cash back at local coffee shops this week.</p>
+                  <span class="notif-time">Yesterday</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button class="sign-out-btn" id="logout-btn" aria-label="Sign Out">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+            <polyline points="16 17 21 12 16 7"></polyline>
+            <line x1="21" y1="12" x2="9" y2="12"></line>
+          </svg>
+          <span class="sign-out-text">Sign Out</span>
+        </button>
+
+        <button class="hamburger-btn" id="menu-btn" aria-label="Toggle navigation menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container page-main">
+
+    <!-- Page Title -->
+    <div class="page-title-row">
+      <div class="page-heading">
+        <h1 id="profile-heading-title">Account Profile</h1>
+        <p id="profile-heading-subtitle">Joint account information, holders and contact preferences.</p>
+      </div>
+    </div>
+
+    <div class="profile-grid">
+
+      <!-- Welcome Banner -->
+      <div class="profile-hero-banner" id="profile-hero-banner">
+        <div class="profile-avatar" id="profile-avatar">E</div>
+        <div class="profile-hero-text">
+          <div class="profile-hello" id="profile-hello">Welcome</div>
+          <div class="profile-name" id="profile-name">Hello, Executive Empire Circle</div>
+        </div>
+        <span class="profile-banner-tag" id="profile-banner-tag">Multiple User Joint Account</span>
+      </div>
+
+      <!-- Joint Account Details -->
+      <div class="profile-box full" id="profile-acct-box">
+        <h3 id="profile-acct-heading">Joint Account Details</h3>
+        <p class="profile-box-sub" id="profile-acct-sub">All accounts are linked to routing number 0260 0959 3.</p>
+        <div id="profile-acct-rows">
+          <div class="profile-acct-row">
+            <div class="profile-acct-title">Checking &middot;&middot;&middot;&middot; 7284</div>
+            <div class="profile-acct-nums"><b>Account No: 5165 8482 7284</b><span>Routing No: 0260 0959 3</span></div>
+          </div>
+          <div class="profile-acct-row">
+            <div class="profile-acct-title">Joint Account &middot;&middot;&middot;&middot; 5839</div>
+            <div class="profile-acct-nums"><b>Account No: 5120 0973 5839</b><span>Routing No: 0260 0959 3</span></div>
+          </div>
+          <div class="profile-acct-row">
+            <div class="profile-acct-title">Joint Account &middot;&middot;&middot;&middot; 9012</div>
+            <div class="profile-acct-nums"><b>Account No: 5190 0324 4012</b><span>Routing No: 0260 0959 3</span></div>
+          </div>
+          <div class="profile-acct-row">
+            <div class="profile-acct-title">Savings &middot;&middot;&middot;&middot; 7297</div>
+            <div class="profile-acct-nums"><b>Account No: 5147 7820 0297</b><span>Routing No: 0260 0959 3</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Joint Account Holders -->
+      <div class="profile-box" id="profile-holders-box">
+        <h3 id="profile-holders-heading">Joint Account Holders</h3>
+        <p class="profile-box-sub" id="profile-holders-sub">This is a joint account with equal ownership.</p>
+        <div id="profile-holders-list">
+          <div class="profile-holder">
+            <span>Mr Jason Statham</span>
+            <span class="prio-tag primary">Primary</span>
+          </div>
+          <div class="profile-holder">
+            <span>Mr Sylvester Stallone</span>
+            <span class="prio-tag secondary">Secondary</span>
+          </div>
+          <div class="profile-holder">
+            <span>Mr Timothy Terk P</span>
+            <span class="prio-tag tertiary">Tertiary</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mailing / Street Address -->
+      <div class="profile-box" id="profile-addr-box">
+        <h3 id="profile-addr-heading">Mailing / Street Address</h3>
+        <p class="profile-box-sub" id="profile-addr-sub">Primary and alternate mailing addresses on file.</p>
+        <div id="profile-addr-list">
+          <div class="profile-addr">
+            <span class="addr-label">Primary</span>
+            <p>2418 Palmetto Avenue, Suite 4B<br>Los Angeles, CA 90016</p>
+          </div>
+          <div class="profile-addr">
+            <span class="addr-label">Secondary</span>
+            <p>77 Rock Ridge Court<br>Santa Monica, CA 90405</p>
+          </div>
+          <div class="profile-addr">
+            <span class="addr-label">Alternate</span>
+            <p>12 Harbor View Terrace, Apt 9C<br>Long Beach, CA 90802</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Details & Priority -->
+      <div class="profile-box full" id="profile-contact-box">
+        <h3 id="profile-contact-heading">Contact Details &amp; Priority</h3>
+        <p class="profile-box-sub" id="profile-contact-sub">Preferred contact method per account holder.</p>
+        <div class="contact-grid" id="profile-contact-grid">
+          <div class="contact-card">
+            <strong>Mr Jason Statham</strong>
+            <span class="prio-tag primary">Priority: Primary</span>
+            <div class="contact-line">
+              <span class="contact-label">Home</span>
+              <span>(310) 555-0142</span>
+            </div>
+            <div class="contact-line">
+              <span class="contact-label">Mobile</span>
+              <span>(310) 555-0178</span>
+            </div>
+            <div class="contact-line">
+              <span class="contact-label">Email</span>
+              <span>jason.statham@mail.com</span>
+            </div>
+          </div>
+          <div class="contact-card">
+            <strong>Mr Sylvester Stallone</strong>
+            <span class="prio-tag secondary">Priority: Secondary</span>
+            <div class="contact-line">
+              <span class="contact-label">Home</span>
+              <span>(424) 555-0189</span>
+            </div>
+            <div class="contact-line">
+              <span class="contact-label">Mobile</span>
+              <span>(424) 555-0237</span>
+            </div>
+            <div class="contact-line">
+              <span class="contact-label">Email</span>
+              <span>sylvester.stallone@mail.com</span>
+            </div>
+          </div>
+          <div class="contact-card">
+            <strong>Mr Timothy Terk P</strong>
+            <span class="prio-tag tertiary">Priority: Tertiary</span>
+            <div class="contact-line">
+              <span class="contact-label">Home</span>
+              <span>(562) 555-0164</span>
+            </div>
+            <div class="contact-line">
+              <span class="contact-label">Mobile</span>
+              <span>(562) 555-0301</span>
+            </div>
+            <div class="contact-line">
+              <span class="contact-label">Email</span>
+              <span>timothy.terkp@mail.com</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <ul class="footer-links">
+        <li><a href="lifeplan.html">BOA Life Plan</a></li>
+        <li><a href="rewards.html">My Rewards</a></li>
+        <li><a href="lifeplan-retirement.html">Retirement Goal</a></li>
+        <li><a href="help.html">Help</a></li>
+              </ul>
+      <p class="footer-note">&copy; 2026 Bank of America Corporation.</p>
+    </div>
+  </footer>
+
+  <script src="common.js"></script>
+  <script src="firebase-config.js"></script>
+  <script src="firebase-db.js"></script>
+  <script src="profile.js"></script>
+</body>
+</html>

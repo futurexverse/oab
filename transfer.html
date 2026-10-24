@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bank of America transfers &mdash; move money between your accounts.">
+  <title>Bank of America - Transfers</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+<!-- Site Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <svg class="brand-flag" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="flag-gradient" x1="0%" y1="50%" x2="100%" y2="50%">
+              <stop offset="50%" stop-color="#012169" />
+              <stop offset="50%" stop-color="#E31837" />
+            </linearGradient>
+          </defs>
+          <path fill="url(#flag-gradient)" d="M15.194 7.57c.487-.163 1.047-.307 1.534-.451-1.408-.596-3.176-1.227-4.764-1.625-.253.073-1.01.271-1.534.434.541.162 2.328.577 4.764 1.642zm-8.896 6.785c.577.343 1.19.812 1.786 1.209 3.952-3.068 7.85-5.432 12.127-6.767-.596-.307-1.119-.578-1.787-.902-2.562.65-6.947 2.4-12.126 6.46zm-.758-6.46c-2.112.974-4.331 2.31-5.54 3.085.433.199.866.361 1.461.65 2.671-1.805 4.764-2.905 5.594-3.266-.595-.217-1.154-.361-1.515-.47zm8.066.234c-.686-.379-3.068-1.263-4.71-1.642-.487.18-1.173.451-1.642.65.595.162 2.815.758 4.71 1.714.487-.235 1.173-.523 1.642-.722zm-3.374 1.552c-.56-.27-1.173-.523-1.643-.74-1.425.704-3.284 1.769-5.63 3.447.505.27 1.047.595 1.624.92 1.805-1.335 3.627-2.598 5.649-3.627zm1.732 8.825c3.79-3.249 9.113-6.407 12.036-7.544a48.018 48.018 0 00-1.949-1.155c-3.771 1.246-8.174 4.007-12.108 7.129.667.505 1.371 1.028 2.02 1.57zm2.851-.235h-.108l-.18-.27h-.109v.27h-.072v-.596h.27c.055 0 .109 0 .145.036.054.019.072.073.072.127 0 .108-.09.162-.198.162zm-.289-.343c.09 0 .199.018.199-.09 0-.072-.072-.09-.144-.09h-.163v.18zm-.523.036c0-.289.235-.523.541-.523.307 0 .542.234.542.523a.543.543 0 01-.542.542.532.532 0 01-.54-.542m.107 0c0 .235.199.433.451.433a.424.424 0 100-.848c-.27 0-.45.199-.45.415"/>
+        </svg>
+        <span class="brand-name">Bank of America</span>
+      </a>
+
+      <nav class="main-nav" id="main-nav">
+        <a href="index.html" class="nav-link">Accounts</a>
+        <a href="index.html#dashboard" class="nav-link">Dashboard</a>
+        <a href="transfer.html" class="nav-link active">Transfers</a>
+        <a href="deposit.html" class="nav-link">Deposit</a>
+        <a href="invest.html" class="nav-link">Invest</a>
+        <a href="help.html" class="nav-link">Help</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="notif-wrap">
+          <button class="icon-btn" id="notif-btn" aria-label="View notifications">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+              <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+            </svg>
+            <span class="badge-count">3</span>
+          </button>
+          <div class="notif-dropdown" id="notif-dropdown">
+            <div class="notif-header">
+              <h3>Notifications</h3>
+              <button class="notif-close" id="close-notif" aria-label="Close notifications">&times;</button>
+            </div>
+            <div class="notif-list">
+              <div class="notif-item">
+                <div class="notif-dot"></div>
+                <div>
+                  <span class="notif-title">Security Alert</span>
+                  <p class="notif-text">New login detected from a new device.</p>
+                  <span class="notif-time">5 mins ago</span>
+                </div>
+              </div>
+              <div class="notif-item">
+                <div class="notif-dot"></div>
+                <div>
+                  <span class="notif-title">Preferred Gold Status Updated</span>
+                  <p class="notif-text">Congratulations, your Rewards Level has been verified.</p>
+                  <span class="notif-time">2 hours ago</span>
+                </div>
+              </div>
+              <div class="notif-item">
+                <div class="notif-dot"></div>
+                <div>
+                  <span class="notif-title">Cash Back Deal Activated</span>
+                  <p class="notif-text">Get 5% cash back at local coffee shops this week.</p>
+                  <span class="notif-time">Yesterday</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button class="sign-out-btn" id="logout-btn" aria-label="Sign Out">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+            <polyline points="16 17 21 12 16 7"></polyline>
+            <line x1="21" y1="12" x2="9" y2="12"></line>
+          </svg>
+          <span class="sign-out-text">Sign Out</span>
+        </button>
+
+        <button class="hamburger-btn" id="menu-btn" aria-label="Toggle navigation menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container page-main">
+
+    <div class="page-title-row">
+      <div class="page-heading">
+        <h1>Transfers</h1>
+        <p>Move money between your Bank of America accounts.</p>
+      </div>
+    </div>
+
+    <div class="main-grid">
+
+      <!-- Main Column -->
+      <div>
+        <!-- Transfer Form -->
+        <div class="form-card">
+          <h2>Transfer Money</h2>
+          <p class="form-card-sub">Transfers between your accounts post immediately.</p>
+
+          <div class="form-success" id="transfer-success"></div>
+          <div class="form-error" id="transfer-error"></div>
+
+          <form id="transfer-form" novalidate>
+            <div class="form-field">
+              <label class="form-label">Choose transfer type</label>
+              <div class="transfer-types">
+                <label class="transfer-type-card">
+                  <input type="radio" name="transfer-type" value="own" checked>
+                  <span class="tt-card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 9h.01M15 9h.01M9 21v-6h6v6"></path></svg>
+                  </span>
+                  <span class="tt-card-title">My BoA Accounts</span>
+                  <span class="tt-card-sub">Between your own accounts</span>
+                </label>
+                <label class="transfer-type-card">
+                  <input type="radio" name="transfer-type" value="customer">
+                  <span class="tt-card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                  </span>
+                  <span class="tt-card-title">Another BoA Customer</span>
+                  <span class="tt-card-sub">Send to any BoA customer</span>
+                </label>
+                <label class="transfer-type-card">
+                  <input type="radio" name="transfer-type" value="wire">
+                  <span class="tt-card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                  </span>
+                  <span class="tt-card-title">Wire Transfer</span>
+                  <span class="tt-card-sub">Domestic or international</span>
+                </label>
+                <label class="transfer-type-card">
+                  <input type="radio" name="transfer-type" value="zelle">
+                  <span class="tt-card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-10 5L2 7"></path></svg>
+                  </span>
+                  <span class="tt-card-title">Zelle</span>
+                  <span class="tt-card-sub">Send to an email or phone</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label class="form-label" for="transfer-from">Transfer from</label>
+              <select class="form-select" id="transfer-from"></select>
+            </div>
+
+            <div class="type-panel active" id="panel-own">
+              <div class="form-field">
+                <label class="form-label" for="transfer-to">Transfer to</label>
+                <select class="form-select" id="transfer-to"></select>
+              </div>
+            </div>
+
+            <div class="type-panel" id="panel-customer">
+              <div class="form-field">
+                <label class="form-label" for="rec-name">Recipient full name</label>
+                <input class="form-input" type="text" id="rec-name" placeholder="e.g. John Carter">
+              </div>
+              <div class="form-row">
+                <div class="form-field">
+                  <label class="form-label" for="rec-account">Recipient account number</label>
+                  <input class="form-input" type="text" id="rec-account" placeholder="Account number">
+                </div>
+                <div class="form-field">
+                  <label class="form-label" for="rec-routing">BoA routing number</label>
+                  <input class="form-input" type="text" id="rec-routing" value="026009593">
+                </div>
+              </div>
+            </div>
+
+            <div class="type-panel" id="panel-wire">
+              <div class="form-field">
+                <label class="form-label">Wire type</label>
+                <div class="segmented" id="wire-scope">
+                  <button type="button" class="seg-btn active" data-scope="domestic">Domestic</button>
+                  <button type="button" class="seg-btn" data-scope="international">International</button>
+                </div>
+              </div>
+              <div class="form-field">
+                <label class="form-label" for="wire-name">Beneficiary name</label>
+                <input class="form-input" type="text" id="wire-name" placeholder="Full name">
+              </div>
+              <div class="form-field">
+                <label class="form-label" for="wire-bank">Receiving bank</label>
+                <input class="form-input" type="text" id="wire-bank" placeholder="Bank name">
+              </div>
+              <div class="form-row">
+                <div class="form-field">
+                  <label class="form-label" for="wire-acct">Beneficiary account / IBAN</label>
+                  <input class="form-input" type="text" id="wire-acct" placeholder="Account or IBAN">
+                </div>
+                <div class="form-field">
+                  <label class="form-label" id="wire-code-label" for="wire-code">ABA routing number</label>
+                  <input class="form-input" type="text" id="wire-code" placeholder="9-digit routing">
+                </div>
+              </div>
+            </div>
+
+            <div class="type-panel" id="panel-zelle">
+              <div class="form-field">
+                <label class="form-label" for="zelle-contact">Send to email or phone number</label>
+                <input class="form-input" type="text" id="zelle-contact" placeholder="Email or mobile number">
+              </div>
+              <div class="form-field">
+                <label class="form-label" for="zelle-name">Recipient name</label>
+                <input class="form-input" type="text" id="zelle-name" placeholder="e.g. Dana Miller">
+              </div>
+              <div class="form-field">
+                <label class="form-label" for="zelle-memo">Memo (optional)</label>
+                <input class="form-input" type="text" id="zelle-memo" placeholder="What's it for?">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-field">
+                <label class="form-label" for="transfer-amount">Amount</label>
+                <input class="form-input" type="number" id="transfer-amount" min="0.01" step="0.01" placeholder="0.00">
+              </div>
+
+              <div class="form-field">
+                <label class="form-label" for="transfer-date">Date</label>
+                <input class="form-input" type="date" id="transfer-date">
+              </div>
+            </div>
+
+            <p class="form-hint">No transfer limit applies &mdash; you can transfer any amount, subject to your available balance.</p>
+
+            <div class="form-actions">
+              <button type="submit" class="btn-primary">Transfer Money</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Recent Transfers -->
+        <div class="list-card">
+          <h3>Recent Transfers</h3>
+          <div id="recent-transfers">
+            <div class="list-item">
+              <div>
+                <div class="list-item-title">Savings Account 7297 to Mr Jason Statham</div>
+                <div class="list-item-sub">Jul 28, 2026 &middot; My BoA Accounts</div>
+              </div>
+              <div class="list-item-right">
+                <span class="list-item-amt loss">-$200.00</span>
+                <span class="status-badge completed">Completed</span>
+              </div>
+            </div>
+            <div class="list-item">
+              <div>
+                <div class="list-item-title">Mr Sylvester Stallone to Savings Account 7297</div>
+                <div class="list-item-sub">Jul 25, 2026 &middot; My BoA Accounts</div>
+              </div>
+              <div class="list-item-right">
+                <span class="list-item-amt loss">-$50.00</span>
+                <span class="status-badge completed">Completed</span>
+              </div>
+            </div>
+            <div class="list-item">
+              <div>
+                <div class="list-item-title">Mr Jason Statham to Mr Sylvester Stallone</div>
+                <div class="list-item-sub">Jul 20, 2026 &middot; My BoA Accounts</div>
+              </div>
+              <div class="list-item-right">
+                <span class="list-item-amt loss">-$120.00</span>
+                <span class="status-badge completed">Completed</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="sidebar-card">
+          <h3 class="sidebar-card-title">Send to Another BoA Customer</h3>
+          <p class="sidebar-card-text">Transfer money directly to any other Bank of America customer using their account details.</p>
+          <button class="card-btn" id="go-customer">Send to Customer</button>
+        </div>
+
+        <div class="sidebar-card">
+          <h3 class="sidebar-card-title">Wire Transfers</h3>
+          <p class="sidebar-card-text">Domestic and international wire transfers with same-day delivery options.</p>
+          <button class="card-btn" id="go-wire">Send Wire</button>
+        </div>
+
+        <div class="sidebar-card">
+          <h3 class="sidebar-card-title">Quick Help</h3>
+          <ul class="help-list">
+            <li><button data-feature="Customer Support">Customer Support</button></li>
+            <li><a href="help.html">Help Center</a></li>
+          </ul>
+        </div>
+      </aside>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <ul class="footer-links">
+        <li><a href="lifeplan.html">BOA Life Plan</a></li>
+        <li><a href="rewards.html">My Rewards</a></li>
+        <li><a href="lifeplan-retirement.html">Retirement Goal</a></li>
+        <li><a href="help.html">Help</a></li>
+              </ul>
+      <p class="footer-note">&copy; 2026 Bank of America Corporation.</p>
+    </div>
+  </footer>
+
+  <script src="common.js"></script>
+  <script src="firebase-config.js"></script>
+  <script src="firebase-db.js"></script>
+  <script src="balances.js"></script>
+  <script src="transfer.js"></script>
+</body>
+</html>
